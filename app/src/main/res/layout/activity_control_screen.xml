@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.nitishprasad.musicplayer.controlScreen">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:layout_weight="1"
+        android:layout_height="45dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </RelativeLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_weight="15"
+        android:scaleType="centerCrop"
+        android:background="@color/colorPrimary"
+        android:layout_height="0dp"></ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/playBack"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <TextView
+                android:id="@+id/sTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:text="00:00:00"
+                android:textSize="15dp" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/seekbar"
+                android:layout_toLeftOf="@+id/eTime"
+                android:layout_toRightOf="@+id/sTime" />
+
+            <TextView
+                android:id="@+id/eTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:text="00:00:00"
+                android:textSize="15dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:onClick="pauseOrPlay"
+                android:src="@drawable/play" />
+
+            <ImageButton
+                android:id="@+id/previous"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_toLeftOf="@+id/play"
+                android:background="@drawable/back"
+                android:onClick="previous" />
+
+            <ImageButton
+                android:id="@+id/next"
+
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_toRightOf="@+id/play"
+                android:background="@drawable/forward"
+                android:onClick="next" />
+
+            <ImageButton
+                android:id="@+id/repeat"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:src = "@drawable/repeat"
+                android:scaleType="centerCrop"
+                android:onClick="repeat" />
+
+            <ImageButton
+                android:id="@+id/fav"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/nfav"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:onClick="fav" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
