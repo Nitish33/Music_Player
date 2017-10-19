@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:id="@+id/appbar"
         android:layout_weight="1"
-        android:layout_height="45dp"
+        android:layout_height="65dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <RelativeLayout
@@ -24,6 +24,26 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Title"
+              android:paddingLeft="20dp"
+              android:layout_below="@+id/toolbar"
+              android:textColor="@color/white"
+              android:textSize="15dp"
+              android:id="@+id/title"
+              />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:text="Singer"
+                android:paddingLeft="20dp"
+                android:id="@+id/singer"
+                android:textColor="@color/white"
+                />
         </RelativeLayout>
 
 
@@ -31,11 +51,11 @@
     </android.support.design.widget.AppBarLayout>
 
     <ImageView
+        android:id="@+id/albumArt"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="15"
-        android:scaleType="centerCrop"
-        android:background="@color/colorPrimary"
-        android:layout_height="0dp"></ImageView>
+        android:scaleType="centerCrop"></ImageView>
 
     <LinearLayout
         android:layout_width="match_parent"
